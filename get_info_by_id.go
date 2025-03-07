@@ -9,31 +9,6 @@ import (
 	"strings"
 )
 
-/*func main() {
-
-	// 配置HTTP客户端
-	proxyURL := "http://127.0.0.1:10809"
-	proxy, err := url.Parse(proxyURL)
-	if err != nil {
-		errMsg := errors.New("proxyURL: " + err.Error())
-		return errMsg
-	}
-	client := &http.Client{
-		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			return http.ErrUseLastResponse
-		},
-		Transport: &http.Transport{
-			Proxy: http.ProxyURL(proxy),
-		},
-	}
-	backData, err := GetInfoByID("BJ01863347", client)
-}*/
-/*
-游戏: pro
-同人: maniax
-漫画: book
-手机游戏: appx
-*/
 
 func GetInfoByID(id, typeName string, client *http.Client) (map[string]interface{}, error) {
 	sType := ""
